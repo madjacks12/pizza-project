@@ -5,41 +5,35 @@
 		<link href="css/styles.css" rel="stylesheet" type="text/css">
 		<script src="js/jquery-3.2.1.js"></script>
 		<script src="js/scripts.js"></script>
-		<title>Ben's Pizza Place</title>
+		<title>Matt's Pizza Place</title>
 	</head>
 	<body>
 		<div class="container">
-		<form id="order">
-			<div class="form-group">
-				<label for="name">Your Name</lable>
-				<input id="name" type="text" class="form-control">
-			</div>
-			<div class="form-group">
-				<label for="address">Your Address</label>
-				<input id="address" type="text" class="form-control">
-			</div>
-			<div class="form-group">
-				<label for="size">Pie Size</label>
-				<input id="small" type="radio" value="Small">Small<br>
-				<input id="medium" type="radio" value="edium">Medium<br>
-				<input id="large" type="radio" value="Large">Large<br>
-
-			</div>
-			<div class="form-group">
-				<label for="name">Toppings</label>
-					<input id="cheese" type="checkbox" value="Cheese">Cheese<br>
-					<input id="pepperoni" type="checkbox" value="Pepperoni">Pepperoni<br>
-					<input id="sausage" type="checkbox" value="Sausage">Sausage<br>
-					<input id="anchovies" type="checkbox" value="Anchovies">Anchovies<br>
-					<input id="peppers" type="checkbox" value="Peppers">Bell Peppers<br>
-					<input id="basil" type="checkbox" value="Basil">Basil<br>
-					<input id="garlic" type="checkbox" value="Garlic">Roasted Garlic<br>
-					<input id="onion" type="checkbox" value="Onion">Red Onion<br>
-					<input id="tomato" type="checkbox"  value="Tomato"> Roasted Tomato<br>
-					<input id="chicken" type="checkbox" value="Chicken"> BBQ Chicken<br>
-			</div>
-			<button id="submit" type="submit" class="btn btn-danger">Order That Pie!</button>
+		<div class="jumbotron">
+			<h1>Matt's Pizza Jungle</h1>
+			<h3>Order Online</h3>
+		</div>
+		<form id="pizza-size">
+			<h4>Choose Your Size:</h4>
+			<select class="form-control" id="size">
+	  		<option>Small</option>
+	  		<option>Medium</option>
+	  		<option>Large</option>
+	  		<option>Extra-Large</option>
+			</select>
 		</form>
-	</div>
+		<h4>Choose your toppings</h4>
+		<form id="pizza-toppings">
+			<input type="checkbox" name="toppings" value="mushrooms">Mushrooms.<br>
+			<input type="checkbox" name="toppings" value="pepperoni">Pepperoni.<br>
+			<input type="checkbox" name="toppings" value="sausage">Suasage.<br>
+			<input type="checkbox" name="toppings" value="bacon">Bacon.<br>
+			<input type="checkbox" name="toppings" value="olives">Olives.<br>
+			<input type="checkbox" name="toppings" value="anchovies">Anchovies.<br>
+			<input type="checkbox" name="toppings" value="onion">Onion<br>
+		</form>
+		<button type="submit">Continue to Checkout</button>
+			<span id="total"></span>
+
 	</body>
 </html>
