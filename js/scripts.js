@@ -6,38 +6,62 @@ function Pie (size, toppings) {
 
 var pizzaSize = [];
 var pizzaToppings = [];
-
-Pie.prototype.price = function() {
-	var price = 0;
-	if (this.size === "small") {
-		price += 5;
-	} else if (this.size === "medium") {
-		price += 6;
-	} else if (this.size === "large") {
-		price += 7;
+var sizePrice = 0;
+var toppingsPrice = 0;
+Pie.prototype.sizePrice = function() {
+	if (this.size === "Small") {
+		sizePrice += 5;
+	} else if (this.size === "Medium") {
+		sizePrice += 6;
+	} else if (this.size === "Large") {
+		sizePrice += 7;
 	} else {
-		price += 8;
-	} if (pizzaToppings === 1) {
-		price += 1.5;
-	} else if (pizzaToppings === 2) {
-		price += 3;
-	} else if (pizzaToppings === 3) {
-		price += 4.5;
+		sizePrice += 8;
+	}
+	return sizePrice;
+};
+Pie.prototype.toppingsPrice = function() {
+	if (pizzaToppings.length === 1) {
+	toppingsPrice += 1.5;
+	} else if (pizzaToppings.length === 2) {
+	toppingsPrice += 3;
+	} else if (pizzaToppings.length === 3) {
+	toppingsPrice += 4.5;
 	} else {
-		price += 6;
-	} return price;
+	toppingsPrice += 6;
+	}
+	return toppingsPrice;
 };
 
 //UI logic
 
 $(document).ready(function() {
-  $("form#tickets").submit(function(event) {
+	$("form#pizza-order").submit(function(event){
     event.preventDefault();
-		var inputtedSize = $("#pizza-size").val();
-	$("input:checkbox[name=toppings]:checked").each(function() {
-		var inputtedToppings = $(this).val();
-		toppings.push(inputtedToppings);
-	})
-	$("#total").text(price);
+   $("input:checkbox[name=toppings-order]:checked").each(function(){
+       var InputtedToppings = $(this).val();
+       pizzaToppings.push(InputtedToppings);
+			 var inputtedSize = $('#size option:selected').val();
+			 pizzaSize.push(inputtedSize);
+			 console.log(pizzaToppings)
+			 console.log(pizzaToppings)
+		});
 	});
 });
+// 		var inputtedSize = $('#size option:selected').val();
+// 		var userPie = new Pie (inputtedSize, inputtedToppings);
+// 	 	pizzaSize.push(inputtedSize);
+// 		pizzaToppings.push(inputtedToppings);
+// 		userPie.sizePrice();
+// 		userPie.toppingsPrice();
+// 		console.log(sizePrice);
+// 		console.log(pizzaToppings);
+// 		$("#total").text(sizePrice + toppingsPrice);
+//
+// });
+// 		// $("input:checkbox[name=pizza-toppings]:checked").each(function() {
+// 		// 	var inputtedToppings = $(this).val();
+// 		// 	toppings.push(inputtedToppings);
+// 		// $("#total").text(price);
+// 		// });
+// });
