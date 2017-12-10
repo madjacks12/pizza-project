@@ -56,23 +56,5 @@ $(document).ready(function() {
 		userPie.toppingsPrice();
 		$("#total").text("$" + price);
 		userPie.reset();
-
 	});
 });
-// 		var inputtedSize = $('#size option:selected').val();
-// 		var userPie = new Pie (inputtedSize, inputtedToppings);
-// 	 	pizzaSize.push(inputtedSize);
-// 		pizzaToppings.push(inputtedToppings);
-// 		userPie.sizePrice();
-// 		userPie.toppingsPrice();
-// 		console.log(sizePrice);
-// 		console.log(pizzaToppings);
-// 		$("#total").text(sizePrice + toppingsPrice);
-//
-// });
-// 		// $("input:checkbox[name=pizza-toppings]:checked").each(function() {
-// 		// 	var inputtedToppings = $(this).val();
-// 		// 	toppings.push(inputtedToppings);
-// 		// $("#total").text(price);
-// 		// });
-// });
