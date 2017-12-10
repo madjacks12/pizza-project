@@ -1,0 +1,40 @@
+#size {
+  width: 120px;
+}
+
+
+
+.jumbotron {
+  background-image: url('http://www.tokkoro.com/picsup/463800-jungle-high-resolution-desktop-backgrounds.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ea64d4;
+}
+
+.display-1 {
+  text-shadow: 2px 2px #000000;
+}
+
+body {
+  background-image: url('http://slice.seriouseats.com/images/2014/01/20140117-pizza-head-commercials.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: blue;
+  text-shadow: 2px 2px 4px #000000;
+}
+h2 {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+ font-size: 60px;
+ text-indent: 50px;
+}
+
+h3 {
+  color: yellow;
+  padding-bottom: 30px;
+}
