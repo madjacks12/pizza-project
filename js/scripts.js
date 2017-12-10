@@ -5,10 +5,9 @@ function Pie (size, toppings) {
 }
 
 var pizzaSize = [];
-
 var pizzaToppings = [];
-
 var price = 0;
+
 Pie.prototype.sizePrice = function() {
 	if (this.size === "Small") {
 		price += 5;
